@@ -1,17 +1,19 @@
 import 'package:flutter/cupertino.dart';
-
+///
+/// text 扩展
+///
 extension TextEX on Text{
-
-  ///字体大小
-  Text setFontSize(double size) {
-    var newStyle = TextStyle(fontSize: size);
-    return textEntrance(style: style?.merge(newStyle)??newStyle);
-  }
 
   ///设置字体
   Text setFontFamily(String family) {
     var newStyle = TextStyle(fontFamily: family);
     return textEntrance(style: style?.merge(newStyle) ?? newStyle);
+  }
+
+  ///字体大小
+  Text setFontSize(double size) {
+    var newStyle = TextStyle(fontSize: size);
+    return textEntrance(style: style?.merge(newStyle)??newStyle);
   }
 
   ///字体粗细、正斜等
@@ -27,7 +29,6 @@ extension TextEX on Text{
         decorationColor: color);
     return textEntrance(style: style?.merge(newStyle) ?? newStyle);
   }
-
 
   ///行间距，倍数
   Text setLineSpacing(double spacing) {
@@ -62,8 +63,6 @@ extension TextEX on Text{
     return textEntrance(textAlign: align);
   }
 
-
-  ///入口
   Text textEntrance({String? data,
     Key? key,
     TextStyle? style,
