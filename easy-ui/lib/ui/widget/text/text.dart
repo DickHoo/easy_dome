@@ -42,7 +42,7 @@ extension TextEX on Text{
   }
 
   ///字体颜色
-  Text color(Color color) {
+  Text setColor(Color color) {
     var newStyle = TextStyle(color: color);
     return textEntrance(style: style?.merge(newStyle) ?? newStyle);
   }
